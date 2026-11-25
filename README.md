@@ -1,5 +1,7 @@
 # DNDi Travel Policy Flight Booking
 
+**Source of the handbook:** https://dndi.org/wp-content/uploads/2025/10/DNDi-Travel-And-Reimbursement-Policy.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with the Drugs for Neglected Diseases initiative (DNDi).** The handbook is DNDi's public *Travel and
 Reimbursement Policy*, version 3.0 (effective 1 January 2022), bundled verbatim for research. Its download URL was not
 recorded (`pilot_work/originals/MANIFEST.md` marks it UNVERIFIED); the raw PDF, sha256 `dcae2c5c...7f2c1c`, is the
