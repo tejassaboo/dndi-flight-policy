@@ -1,0 +1,153 @@
+{
+  "id": "lichen-bay",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "quill-brook",
+  "twin_fact": "nonstops scheduled at 361 or 360 minutes",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Delhi on February 1st for the manufacturing partner visit on the 2nd. Premium economy please, if the policy allows it; otherwise economy is fine.",
+  "trip": {
+    "traveller_name": "Faith Njoroge",
+    "traveller_title": "Quality Assurance Manager, Nairobi office",
+    "traveller_kind": "STAFF",
+    "home_airport": "NBO",
+    "workplace_airport": "NBO",
+    "contract_travel_terms": "",
+    "origin": "NBO",
+    "destination": "DEL",
+    "travel_date": "2027-02-01",
+    "business_travel_date": "2027-02-01",
+    "return_date": "",
+    "booking_date": "2026-12-07",
+    "planning_note": "",
+    "purpose": "Visit to the Indian manufacturing partner",
+    "first_meeting_date": "2027-02-02",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 0,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "SUPERVISOR",
+        "name": "Samuel Otieno",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "DEL",
+        "date": "2027-02-01",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "09:40",
+            "minutes": [
+              361
+            ]
+          },
+          "india": {
+            "carrier": "AI",
+            "depart": "11:20",
+            "minutes": [
+              361
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 41000
+          },
+          {
+            "slot": "kenya-premium",
+            "flight": "kenya",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 69000
+          },
+          {
+            "slot": "india-economy",
+            "flight": "india",
+            "cabin": "ECONOMY",
+            "fare_cents": 44500
+          },
+          {
+            "slot": "india-premium",
+            "flight": "india",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 73000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-premium"
+    ],
+    "cabins": [
+      "PREMIUM_ECONOMY"
+    ],
+    "reason_codes": [
+      "PREMIUM_ECONOMY_ALLOWED"
+    ],
+    "approvers": [
+      "NONE",
+      "SUPERVISOR"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "EXTRA_LEGROOM"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        141,
+        142
+      ],
+      "sha256": "29b76cb510f0e8f350eb660c0c7af788f5cd367ebb6a88c81e0852aa799991bf",
+      "quote": "DNDi Travellers shall be authorized to purchase extra legroom or a premium economy ticket when one flight is over 6 hours.",
+      "why": "premium economy when one flight is over 6 hours"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Nonstops scheduled at 361 minutes: one flight over 6 hours (strict, lines 141-142), so premium economy is authorized and asked for: the cheaper premium fare, Kenya Airways at EUR 690."
+}

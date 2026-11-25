@@ -1,0 +1,153 @@
+{
+  "id": "saffron-weir",
+  "category": "easy",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Delhi to London Heathrow on February 3rd for the partner workshop at the London university on the 4th. I'd like premium economy.",
+  "trip": {
+    "traveller_name": "Priya Raman",
+    "traveller_title": "Regulatory Affairs Lead, New Delhi office",
+    "traveller_kind": "STAFF",
+    "home_airport": "DEL",
+    "workplace_airport": "DEL",
+    "contract_travel_terms": "",
+    "origin": "DEL",
+    "destination": "LHR",
+    "travel_date": "2027-02-03",
+    "business_travel_date": "2027-02-03",
+    "return_date": "",
+    "booking_date": "2026-12-10",
+    "planning_note": "",
+    "purpose": "Partner workshop at a London university",
+    "first_meeting_date": "2027-02-04",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 0,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "SUPERVISOR",
+        "name": "Arjun Mehta",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "DEL",
+        "destination": "LHR",
+        "date": "2027-02-03",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "india": {
+            "carrier": "AI",
+            "depart": "13:30",
+            "minutes": [
+              590
+            ]
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "14:20",
+            "minutes": [
+              595
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "india-economy",
+            "flight": "india",
+            "cabin": "ECONOMY",
+            "fare_cents": 54000
+          },
+          {
+            "slot": "india-premium",
+            "flight": "india",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 98000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 57500
+          },
+          {
+            "slot": "british-premium",
+            "flight": "british",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 104000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "india-premium"
+    ],
+    "cabins": [
+      "PREMIUM_ECONOMY"
+    ],
+    "reason_codes": [
+      "PREMIUM_ECONOMY_ALLOWED"
+    ],
+    "approvers": [
+      "NONE",
+      "SUPERVISOR"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "EXTRA_LEGROOM"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        141,
+        142
+      ],
+      "sha256": "29b76cb510f0e8f350eb660c0c7af788f5cd367ebb6a88c81e0852aa799991bf",
+      "quote": "DNDi Travellers shall be authorized to purchase extra legroom or a premium economy ticket when one flight is over 6 hours.",
+      "why": "premium economy when one flight is over 6 hours"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Nonstops of 590 and 595 minutes: one flight over 6 hours, so a premium economy ticket is authorized (lines 141-142) and the traveller asks for it: the cheaper premium economy fare, Air India at EUR 980, under every Annex 2 amount for a trip between continents. No sign-off is named for premium economy."
+}

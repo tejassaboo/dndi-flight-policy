@@ -1,0 +1,196 @@
+{
+  "id": "pewter-glade",
+  "category": "multi_rule",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "London Heathrow to Johannesburg on March 10th; the meetings with our South African clinical partners start on the 11th. Business class please, if the policy allows it; otherwise economy is fine.",
+  "trip": {
+    "traveller_name": "Oliver Grant",
+    "traveller_title": "Consultant, clinical trial monitoring",
+    "traveller_kind": "CONSULTANT",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "contract_travel_terms": "",
+    "origin": "LHR",
+    "destination": "JNB",
+    "travel_date": "2027-03-10",
+    "business_travel_date": "2027-03-10",
+    "return_date": "",
+    "booking_date": "2027-01-12",
+    "planning_note": "",
+    "purpose": "Meetings with the South African clinical partners",
+    "first_meeting_date": "2027-03-11",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 0,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "MANAGER_RESPONSIBLE",
+        "name": "Thomas Brun",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      },
+      {
+        "role": "EXECUTIVE_DIRECTOR",
+        "name": "Laurent Mercier",
+        "subject": "BUSINESS_CLASS",
+        "covers": "Business class for this trip, if the handbook's conditions for business class are met"
+      },
+      {
+        "role": "FINANCIAL_CONTROL_HEAD",
+        "name": "Anna Keller",
+        "subject": "AIR_COST",
+        "covers": "The trip's air cost above the Annex 2 ceiling, for a business class ticket"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JNB",
+        "date": "2027-03-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "07:30",
+            "minutes": [
+              660
+            ]
+          },
+          "african": {
+            "carrier": "SA",
+            "depart": "08:00",
+            "minutes": [
+              650
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 79000
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 365000
+          },
+          {
+            "slot": "african-economy",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 76000
+          },
+          {
+            "slot": "african-business",
+            "flight": "african",
+            "cabin": "BUSINESS",
+            "fare_cents": 349000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "african-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "EXECUTIVE_DIRECTOR",
+      "FINANCIAL_CONTROL_HEAD",
+      "MANAGER_RESPONSIBLE",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        124,
+        132
+      ],
+      "sha256": "47e588339cbf53a743d2ba8abf6d67f4a687e783511d9374a08a89cef5bc0044",
+      "quote": "• When the following conditions are met:  when a single leg journey is nine hours or more, and for multi-leg journeys if the combined travel time of the journey is 11 hours or more, including a maximum of 2 hours of connection time, provided that the journey to the next destination resumes within 12 hours;  Flights include overnight travel; and  the DNDi Traveller will attend important meetings with external partners the same or following day.",
+      "why": "business class: nine hours single leg or 11 hours multi-leg, overnight, external partners the same or following day"
+    },
+    {
+      "lines": [
+        119,
+        119
+      ],
+      "sha256": "72c4347f7acb7ae8bb4092614dce21adbc2ff7a25d62f0ae1520eaf9de7aa3f3",
+      "quote": "All DNDi Travel must be in economy class.",
+      "why": "economy class"
+    },
+    {
+      "lines": [
+        102,
+        102
+      ],
+      "sha256": "829a761bf48140b1a396154547543b98e644109d7fdcbe95321178454c5df8f8",
+      "quote": "DNDi Travellers shall always use economy class.",
+      "why": "economy class"
+    },
+    {
+      "lines": [
+        103,
+        105
+      ],
+      "sha256": "5f2c48bb4be606c1a504dc677a01babd36b44ee17d1bd258851a261e76e4fdc0",
+      "quote": "DNDi Travellers should take the least costly economy routing available, provided that the total journey time does not exceed the total journey time of the most direct route by four or more hours.",
+      "why": "the least costly economy routing within four hours of the most direct route"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Nonstops of 650 and 660 minutes (well over nine hours) to meetings with external partners the next day, but they leave London in the morning and land at 20:30 and 20:50 local: the flights do not include overnight travel (line 130), so the conditions are not all met (lines 124-132) and the Executive Director's conditional pre-approval does not apply. Economy class, the fallback given: South African Airways at EUR 760."
+}

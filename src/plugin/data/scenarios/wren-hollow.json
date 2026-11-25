@@ -1,0 +1,186 @@
+{
+  "id": "wren-hollow",
+  "category": "distractor",
+  "overlays": [
+    "multi_traveller"
+  ],
+  "twin_of": "sorrel-pike",
+  "twin_fact": "five or four colleagues already on the Kenya Airways flight",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Johannesburg on February 8th for the clinical-trial investigators' meeting on the 9th. Four of our team are already booked on the Kenya Airways morning flight; book me on whatever the handbook prefers.",
+  "trip": {
+    "traveller_name": "Esther Chebet",
+    "traveller_title": "Clinical Trial Manager, Nairobi office",
+    "traveller_kind": "STAFF",
+    "home_airport": "NBO",
+    "workplace_airport": "NBO",
+    "contract_travel_terms": "",
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2027-02-08",
+    "business_travel_date": "2027-02-08",
+    "return_date": "",
+    "booking_date": "2027-01-04",
+    "planning_note": "",
+    "purpose": "Clinical-trial investigators' meeting in Johannesburg",
+    "first_meeting_date": "2027-02-09",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 0,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "SUPERVISOR",
+        "name": "Samuel Otieno",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": [
+      {
+        "name": "Joseph Kiprop",
+        "flight_number": "KQ 1460",
+        "date": "2027-02-08",
+        "cabin": "ECONOMY"
+      },
+      {
+        "name": "Mercy Achieng",
+        "flight_number": "KQ 1460",
+        "date": "2027-02-08",
+        "cabin": "ECONOMY"
+      },
+      {
+        "name": "Peter Mutua",
+        "flight_number": "KQ 1460",
+        "date": "2027-02-08",
+        "cabin": "ECONOMY"
+      },
+      {
+        "name": "Lucy Wairimu",
+        "flight_number": "KQ 1460",
+        "date": "2027-02-08",
+        "cabin": "ECONOMY"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2027-02-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "07:30",
+            "minutes": [
+              245
+            ]
+          },
+          "african": {
+            "carrier": "SA",
+            "depart": "10:05",
+            "minutes": [
+              250
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 38000
+          },
+          {
+            "slot": "african-economy",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 41500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "SUPERVISOR"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
+      "INSURANCE",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        102,
+        102
+      ],
+      "sha256": "829a761bf48140b1a396154547543b98e644109d7fdcbe95321178454c5df8f8",
+      "quote": "DNDi Travellers shall always use economy class.",
+      "why": "economy class"
+    },
+    {
+      "lines": [
+        103,
+        105
+      ],
+      "sha256": "5f2c48bb4be606c1a504dc677a01babd36b44ee17d1bd258851a261e76e4fdc0",
+      "quote": "DNDi Travellers should take the least costly economy routing available, provided that the total journey time does not exceed the total journey time of the most direct route by four or more hours.",
+      "why": "the least costly economy routing within four hours of the most direct route"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        44,
+        45
+      ],
+      "quote": "to avoid more than five DNDi Travellers taking the same routing",
+      "why": "five travellers on one routing is still within the limit"
+    }
+  ],
+  "design_notes": "As sorrel-pike, but four colleagues are on the Kenya Airways flight: with this traveller five DNDi Travellers take that routing, which is not more than five (lines 44-45). The least costly routing: Kenya Airways at EUR 380."
+}

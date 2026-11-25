@@ -1,0 +1,150 @@
+{
+  "id": "slate-loch",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I live in Toronto and work at our New York office. Please book my usual Monday flight down on February 22nd so I'm at my desk that morning.",
+  "trip": {
+    "traveller_name": "Claire Dubois",
+    "traveller_title": "Grants Manager, New York office",
+    "traveller_kind": "STAFF",
+    "home_airport": "YYZ",
+    "workplace_airport": "JFK",
+    "contract_travel_terms": "",
+    "origin": "YYZ",
+    "destination": "JFK",
+    "travel_date": "2027-02-22",
+    "business_travel_date": "2027-02-22",
+    "return_date": "",
+    "booking_date": "2027-01-20",
+    "planning_note": "",
+    "purpose": "A week of work at the New York office",
+    "first_meeting_date": "2027-02-22",
+    "meeting_with": "COLLEAGUES_ONLY",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 750,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "SUPERVISOR",
+        "name": "Rebecca Lindqvist",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "JFK",
+        "date": "2027-02-22",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "canada": {
+            "carrier": "AC",
+            "depart": "06:30",
+            "minutes": [
+              95
+            ]
+          },
+          "delta": {
+            "carrier": "DL",
+            "depart": "07:15",
+            "minutes": [
+              100
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "canada-economy",
+            "flight": "canada",
+            "cabin": "ECONOMY",
+            "fare_cents": 21000
+          },
+          {
+            "slot": "delta-economy",
+            "flight": "delta",
+            "cabin": "ECONOMY",
+            "fare_cents": 23500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "HOME_TO_WORK_JOURNEY",
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE",
+      "SUPERVISOR"
+    ],
+    "clauses": [
+      "OBJECTIVE_SCOPE",
+      "TRAVEL_PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        39,
+        39
+      ],
+      "sha256": "581c44b9a58c040fee5a4bf5b8fd748d605271258d89e658e1670182daddcf0f",
+      "quote": "Journeys between an individual's home and regular place of work are not considered DNDi Travel.",
+      "why": "the journey between home and the regular place of work is not DNDi Travel"
+    },
+    {
+      "lines": [
+        52,
+        52
+      ],
+      "sha256": "bafc1549aa5811a95d0832aa568238d0b740a835d0877b5e921266cd9f84fa90",
+      "quote": "Unless stated otherwise in the DNDi Traveller's contract",
+      "why": "the footnote's exception: the traveller's contract"
+    },
+    {
+      "lines": [
+        20,
+        21
+      ],
+      "sha256": "d92093b9f838d25d07d86f39c0f724dbb904d64d7e4a83ce90edda93786095c2",
+      "quote": "travel for DNDi business and funded by DNDi (\"DNDi Travel\")",
+      "why": "the policy covers travel for DNDi business"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        210,
+        210
+      ],
+      "quote": "When the DNDi Traveller is staying for one week or more",
+      "why": "an accommodation rule about trip length"
+    }
+  ],
+  "design_notes": "The traveller's home is Toronto and her regular place of work is the New York office. Line 39: journeys between an individual's home and regular place of work are not DNDi Travel, and her contract says nothing otherwise (line 52). DNDi buys no ticket. The supervisor's approval of a request form changes nothing (rule 4(b))."
+}

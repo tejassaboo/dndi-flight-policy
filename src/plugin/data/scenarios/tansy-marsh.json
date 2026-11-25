@@ -1,0 +1,170 @@
+{
+  "id": "tansy-marsh",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "thistle-moor",
+  "twin_fact": "connection layover 159 or 160 minutes (journey 239 or 240 minutes longer)",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Amsterdam on January 27th for the partner workshop on the 29th. I'd prefer the KLM nonstop if possible; if the handbook wants something else, book that.",
+  "trip": {
+    "traveller_name": "Brian Mwangi",
+    "traveller_title": "Pharmacovigilance Specialist, Nairobi office",
+    "traveller_kind": "STAFF",
+    "home_airport": "NBO",
+    "workplace_airport": "NBO",
+    "contract_travel_terms": "",
+    "origin": "NBO",
+    "destination": "AMS",
+    "travel_date": "2027-01-27",
+    "business_travel_date": "2027-01-27",
+    "return_date": "",
+    "booking_date": "2026-12-03",
+    "planning_note": "",
+    "purpose": "Workshop with the Dutch research partners",
+    "first_meeting_date": "2027-01-29",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "NONSTOP",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 0,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "SUPERVISOR",
+        "name": "Samuel Otieno",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "AMS",
+        "date": "2027-01-27",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "klm": {
+            "carrier": "KL",
+            "depart": "23:55",
+            "minutes": [
+              510
+            ]
+          },
+          "cairo": {
+            "carrier": "MS",
+            "via": [
+              "CAI"
+            ],
+            "depart": "23:55",
+            "minutes": [
+              300,
+              290
+            ],
+            "layovers": [
+              159
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "klm-economy",
+            "flight": "klm",
+            "cabin": "ECONOMY",
+            "fare_cents": 72000
+          },
+          {
+            "slot": "cairo-economy",
+            "flight": "cairo",
+            "cabin": "ECONOMY",
+            "fare_cents": 51000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "cairo-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_TOO_EXPENSIVE",
+      "ALTERNATE_ROUTE_WITHIN_MARGIN",
+      "COST_SAVINGS",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "SUPERVISOR"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        103,
+        105
+      ],
+      "sha256": "5f2c48bb4be606c1a504dc677a01babd36b44ee17d1bd258851a261e76e4fdc0",
+      "quote": "DNDi Travellers should take the least costly economy routing available, provided that the total journey time does not exceed the total journey time of the most direct route by four or more hours.",
+      "why": "the least costly economy routing within four hours of the most direct route"
+    },
+    {
+      "lines": [
+        106,
+        107
+      ],
+      "sha256": "824e17901012809179ef82468124bbfe3c5b00edee594a586c1850a7c0ee19cc",
+      "quote": "Personal preference shall not be the basis for selecting a route. A lower cost, acceptable alternative may be imposed by DNDi.",
+      "why": "personal preference is not a basis for the route; a lower cost alternative may be imposed"
+    },
+    {
+      "lines": [
+        102,
+        102
+      ],
+      "sha256": "829a761bf48140b1a396154547543b98e644109d7fdcbe95321178454c5df8f8",
+      "quote": "DNDi Travellers shall always use economy class.",
+      "why": "economy class"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Both leave at 23:55. The KLM nonstop takes 510 minutes; the EgyptAir connection through Cairo 749 (300 + 159 on the ground + 290), 239 minutes more: it does not exceed the most direct route's journey time by four or more hours (lines 103-105), and it is EUR 210 cheaper. Personal preference is not a basis for the route and the lower cost alternative may be imposed (lines 106-107): the connection. It lands on the 28th, a day before the workshop."
+}

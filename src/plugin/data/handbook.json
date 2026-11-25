@@ -1,0 +1,16 @@
+{
+  "id": "dndi-flight-policy",
+  "name": "DNDi Travel Policy Flight Booking",
+  "slug": "dndi",
+  "title": "DNDi Travel and Reimbursement Policy, version 3.0 (effective 1 January 2022)",
+  "frozen_file": "dndi_policy.txt",
+  "sha256": "524c08e4143312a4d2b36162e8c8b2222c4c8149faaeaff11ef0f3e51bfda4e7",
+  "raw_pdf_sha256": "dcae2c5c6e988b010ae94b3242b568058dc1d6ca0b41a6537e7cb5a5a97f2c1c",
+  "words": 2946,
+  "lines": 320,
+  "source": "not recorded locally (UNVERIFIED); the raw PDF (sha256 dcae2c5c...7f2c1c) is the pinned copy",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 24,
+  "currency": "EUR",
+  "background_offers": 0
+}

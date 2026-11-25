@@ -1,0 +1,130 @@
+{
+  "id": "violet-ford",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me a flight from Zurich to Paris on February 25th for the afternoon meeting with our French partners. If flying isn't allowed, I'll take the train and book it myself.",
+  "trip": {
+    "traveller_name": "Lukas Brunner",
+    "traveller_title": "Consultant, formulation development",
+    "traveller_kind": "CONSULTANT",
+    "home_airport": "ZRH",
+    "workplace_airport": "ZRH",
+    "contract_travel_terms": "",
+    "origin": "ZRH",
+    "destination": "CDG",
+    "travel_date": "2027-02-25",
+    "business_travel_date": "2027-02-25",
+    "return_date": "",
+    "booking_date": "2027-01-18",
+    "planning_note": "",
+    "purpose": "Afternoon meeting with the French partners in Paris",
+    "first_meeting_date": "2027-02-25",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 245,
+    "train_arrives_in_time": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER_RESPONSIBLE",
+        "name": "Ines Moreau",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "ZRH",
+        "destination": "CDG",
+        "date": "2027-02-25",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "swiss": {
+            "carrier": "LX",
+            "depart": "07:10",
+            "minutes": [
+              80
+            ]
+          },
+          "france": {
+            "carrier": "AF",
+            "depart": "08:40",
+            "minutes": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "swiss-economy",
+            "flight": "swiss",
+            "cabin": "ECONOMY",
+            "fare_cents": 18500
+          },
+          {
+            "slot": "france-economy",
+            "flight": "france",
+            "cabin": "ECONOMY",
+            "fare_cents": 19900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "RAIL_PREFERRED"
+    ],
+    "approvers": [
+      "MANAGER_RESPONSIBLE",
+      "NONE"
+    ],
+    "clauses": [
+      "MEANS_OF_TRAVEL",
+      "RAIL_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        160,
+        161
+      ],
+      "sha256": "f701ab606297fab4a06efaae61f3125f54e37e8e3dab047b17a0cfb4ec7b1baf",
+      "quote": "train trips under 6 hours shall be selected over flying, whenever possible",
+      "why": "a train under 6 hours instead of the flight"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        172,
+        172
+      ],
+      "quote": "arrival or departure either before 08.00 or after 20.00",
+      "why": "a taxi rule, not a flight rule"
+    }
+  ],
+  "design_notes": "The fastest train takes 245 minutes and arrives in time for the meeting. Line 160: train trips under 6 hours shall be selected over flying, whenever possible. DNDi buys no flight; the traveller takes the train."
+}

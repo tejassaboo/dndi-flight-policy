@@ -1,0 +1,182 @@
+{
+  "id": "yarrow-shoal",
+  "category": "flag",
+  "overlays": [
+    "approval_required"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "bramble-cove",
+    "juniper-dell"
+  ],
+  "ambiguity_note": "none: the Executive Director's prior approval is required and missing; the text is clear",
+  "request": "London Heathrow to Rome on February 17th for the afternoon workshop with the Italian research partners. My doctor's certificate says I have to fly business class while my hip heals; it's on file. Business class, please.",
+  "trip": {
+    "traveller_name": "Margaret Ellis",
+    "traveller_title": "Consultant, epidemiology",
+    "traveller_kind": "CONSULTANT",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "contract_travel_terms": "",
+    "origin": "LHR",
+    "destination": "FCO",
+    "travel_date": "2027-02-17",
+    "business_travel_date": "2027-02-17",
+    "return_date": "",
+    "booking_date": "2027-01-11",
+    "planning_note": "",
+    "purpose": "Workshop with the Italian research partners",
+    "first_meeting_date": "2027-02-17",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": true,
+    "train_minutes": 720,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "MANAGER_RESPONSIBLE",
+        "name": "Thomas Brun",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "FCO",
+        "date": "2027-02-17",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "frankfurt": {
+            "carrier": "LH",
+            "via": [
+              "FRA"
+            ],
+            "depart": "07:20",
+            "minutes": [
+              85,
+              110
+            ],
+            "layovers": [
+              65
+            ]
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "08:10",
+            "minutes": [
+              150
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "frankfurt-economy",
+            "flight": "frankfurt",
+            "cabin": "ECONOMY",
+            "fare_cents": 18900
+          },
+          {
+            "slot": "frankfurt-business",
+            "flight": "frankfurt",
+            "cabin": "BUSINESS",
+            "fare_cents": 63000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 16500
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 58000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "british-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "MEDICAL_NEED"
+    ],
+    "approvers": [
+      "EXECUTIVE_DIRECTOR",
+      "STRATEGY_OPERATIONS_DIRECTOR"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        120,
+        122
+      ],
+      "sha256": "00fefdc45937a903c56df30500c2b45d06489e884ffdb3c8d9e153c1da790052",
+      "quote": "The following are the strictly exceptional cases that DNDi Travel in business class is permitted: • Any DNDi Traveller with a medical condition (documented by a medical certificate) obliging her/him to travel in business class; or",
+      "why": "business class for a medical condition documented by a medical certificate"
+    },
+    {
+      "lines": [
+        133,
+        134
+      ],
+      "sha256": "fffda7111c694ba5d4ba40382be4843bd53635bb59b2545b6778eb36ac65a48d",
+      "quote": "All DNDi Travel in business class requires prior approval by the Executive Director (or, by delegation to the Operations and Strategy Director).",
+      "why": "all business class needs the Executive Director's prior approval"
+    },
+    {
+      "lines": [
+        137,
+        139
+      ],
+      "sha256": "2e14169e052cecc9c24bd0a790ff03570c0c906162e7ebf6398b39595df6018f",
+      "quote": "The assistants/travel officers, or the DNDi Traveller (if booking directly using an online travel platform accepted by DNDi) shall propose a minimum of two adequate business class options and the most economical route shall be selected.",
+      "why": "at least two business options; the most economical is selected"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The medical certificate allows business class (lines 121-122), but all business class travel requires the Executive Director's prior approval, or by delegation the Operations and Strategy Director's (lines 133-134), and none is on file. Hold the most economical business fare (BA EUR 580) for that approval. Approval required, not 'no compliant offer'."
+}

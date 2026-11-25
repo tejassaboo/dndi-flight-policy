@@ -1,0 +1,206 @@
+{
+  "id": "russet-heath",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option",
+    "overnight"
+  ],
+  "twin_of": "umber-falls",
+  "twin_fact": "the BA business fare is EUR 5,000.00 or EUR 5,010.00",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Johannesburg to London Heathrow on March 15th for meetings with our UK funding partners starting on the 17th. Business class, please.",
+  "trip": {
+    "traveller_name": "Thandiwe Nkosi",
+    "traveller_title": "Consultant, health economics",
+    "traveller_kind": "CONSULTANT",
+    "home_airport": "JNB",
+    "workplace_airport": "JNB",
+    "contract_travel_terms": "",
+    "origin": "JNB",
+    "destination": "LHR",
+    "travel_date": "2027-03-15",
+    "business_travel_date": "2027-03-15",
+    "return_date": "",
+    "booking_date": "2027-01-15",
+    "planning_note": "",
+    "purpose": "Meetings with the UK funding partners",
+    "first_meeting_date": "2027-03-17",
+    "meeting_with": "EXTERNAL_PARTNERS",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "traveller_pays_difference": false,
+    "personal_days_approved": false,
+    "medical_certificate_on_file": false,
+    "train_minutes": 0,
+    "train_arrives_in_time": false,
+    "sign_offs": [
+      {
+        "role": "MANAGER_RESPONSIBLE",
+        "name": "Thomas Brun",
+        "subject": "TRAVEL_REQUEST",
+        "covers": "The Travel Request form for this trip, approved before booking"
+      },
+      {
+        "role": "EXECUTIVE_DIRECTOR",
+        "name": "Laurent Mercier",
+        "subject": "BUSINESS_CLASS",
+        "covers": "Business class for this trip, if the handbook's conditions for business class are met"
+      },
+      {
+        "role": "FINANCIAL_CONTROL_HEAD",
+        "name": "Anna Keller",
+        "subject": "AIR_COST",
+        "covers": "The trip's air cost above the Annex 2 ceiling, for a business class ticket"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "JNB",
+        "destination": "LHR",
+        "date": "2027-03-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "21:10",
+            "minutes": [
+              710
+            ]
+          },
+          "virgin": {
+            "carrier": "VS",
+            "depart": "19:55",
+            "minutes": [
+              705
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "virgin-economy",
+            "flight": "virgin",
+            "cabin": "ECONOMY",
+            "fare_cents": 81000
+          },
+          {
+            "slot": "virgin-business",
+            "flight": "virgin",
+            "cabin": "BUSINESS",
+            "fare_cents": 524000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 78000
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 500000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "INTERNATIONAL_LONG_FLIGHT",
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "EXECUTIVE_DIRECTOR",
+      "FINANCIAL_CONTROL_HEAD",
+      "MANAGER_RESPONSIBLE",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        124,
+        132
+      ],
+      "sha256": "47e588339cbf53a743d2ba8abf6d67f4a687e783511d9374a08a89cef5bc0044",
+      "quote": "• When the following conditions are met:  when a single leg journey is nine hours or more, and for multi-leg journeys if the combined travel time of the journey is 11 hours or more, including a maximum of 2 hours of connection time, provided that the journey to the next destination resumes within 12 hours;  Flights include overnight travel; and  the DNDi Traveller will attend important meetings with external partners the same or following day.",
+      "why": "business class: nine hours single leg or 11 hours multi-leg, overnight, external partners the same or following day"
+    },
+    {
+      "lines": [
+        133,
+        134
+      ],
+      "sha256": "fffda7111c694ba5d4ba40382be4843bd53635bb59b2545b6778eb36ac65a48d",
+      "quote": "All DNDi Travel in business class requires prior approval by the Executive Director (or, by delegation to the Operations and Strategy Director).",
+      "why": "all business class needs the Executive Director's prior approval"
+    },
+    {
+      "lines": [
+        137,
+        139
+      ],
+      "sha256": "2e14169e052cecc9c24bd0a790ff03570c0c906162e7ebf6398b39595df6018f",
+      "quote": "The assistants/travel officers, or the DNDi Traveller (if booking directly using an online travel platform accepted by DNDi) shall propose a minimum of two adequate business class options and the most economical route shall be selected.",
+      "why": "at least two business options; the most economical is selected"
+    },
+    {
+      "lines": [
+        108,
+        111
+      ],
+      "sha256": "eb65d7fba13ab0b5745ee11b026e5b3751822be93c6c516c25dfb946a2cf97c1",
+      "quote": "The maximum cost of air travel is set out in the table in Annex 2, which is determined and periodically reviewed by the Global Executive Team. The cost of a DNDi Traveller's air travel cannot exceed these limits without prior (ie before tickets are issued), written approval from the Head of Financial Control (or the Finance Director in the Head of Financial Control's absence).",
+      "why": "the air cost above the Annex 2 ceilings needs the Head of Financial Control's prior written approval"
+    },
+    {
+      "lines": [
+        56,
+        58
+      ],
+      "sha256": "ad32482c241c07b8d1bf48bcb7b51ad4d54f641a65ab60ae332c14cbc4111ff2",
+      "quote": "must be completed and approved before booking the elements of DNDi Travel",
+      "why": "the Travel Request form is approved before booking"
+    },
+    {
+      "lines": [
+        269,
+        275
+      ],
+      "sha256": "5f9fa9c26e036fdad0a9bcdb0b3943ae9d0d813a326535cc71bd63808e2be55c",
+      "quote": "2. Authorization: Travel Request Form (link + user-friendly guide), completed by and approved by: DNDi Traveller Completed by Approved by Staff the Staff The Staff's supervisor Consultants the Consultant or the Consultant's manager the manager responsible Members of a Body of DNDi the team responsible the manager responsible Guests the team responsible the manager responsible",
+      "why": "Annex 1: who approves the Travel Request form for each kind of traveller"
+    },
+    {
+      "lines": [
+        112,
+        114
+      ],
+      "sha256": "4d2decc7bc65a7372c7e2358d0dfde88a88224edc273070aa5cec41112bc80bf",
+      "quote": "Every airline ticket above EUR 5'000 must be approved before purchase by the Strategy and Operations Director (or in his/her absence, the Executive Director, or in his/her absence, or the Finance and Planning Director or the HR and Organisational Directors).",
+      "why": "every ticket above EUR 5,000 needs the Strategy and Operations Director's approval before purchase"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Overnight nonstops of 705 and 710 minutes to meetings with external partners the following day: business class is allowed and the Executive Director approved it; the Head of Financial Control approved the air cost. The most economical business option is BA at exactly EUR 5,000.00, which is not above EUR 5,000 (line 112), so no Strategy and Operations Director approval is needed: book it."
+}
