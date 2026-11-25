@@ -19,7 +19,7 @@
       "a multi-leg journey qualifies only with connections of at most two hours (or the ground time does not count at all): no business class, economy"
     ]
   },
-  "request": "Johannesburg to Mumbai on March 3rd for meetings with our Indian manufacturing partner starting on the 5th. Business class please, if the policy allows it; otherwise economy is fine.",
+  "request": "Johannesburg to Mumbai on March 3rd for meetings with our Indian manufacturing partner starting at 5 pm on the 4th. Business class please, if the policy allows it; otherwise economy is fine.",
   "trip": {
     "traveller_name": "Naledi Mokoena",
     "traveller_title": "Consultant, supply chain",
@@ -35,7 +35,7 @@
     "booking_date": "2027-01-05",
     "planning_note": "",
     "purpose": "Meetings with the Indian manufacturing partner",
-    "first_meeting_date": "2027-03-05",
+    "first_meeting_date": "2027-03-04",
     "meeting_with": "EXTERNAL_PARTNERS",
     "requested_cabin": "BUSINESS",
     "requested_routing": "ANY",
@@ -217,5 +217,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Both itineraries fly 240 + 340 = 580 minutes with a 150-minute connection in Nairobi (journey 730 minutes), overnight, to meetings with an external partner the day after landing; no flight alone reaches nine hours. The multi-leg condition counts 'the combined travel time of the journey ... 11 hours or more, including a maximum of 2 hours of connection time' (lines 125-129). Counting up to two hours of the wait gives 700 minutes (business); reading the maximum as a cap on the connection, or leaving ground time out, gives no business class. Hold the most economical business fare (or the economy fare of the other reading) for the Executive Director."
+  "design_notes": "Both itineraries fly 240 + 340 = 580 minutes with a 150-minute connection in Nairobi (journey 730 minutes), overnight, to meetings with an external partner on the evening of landing (the day after leaving); no flight alone reaches nine hours. The multi-leg condition counts 'the combined travel time of the journey ... 11 hours or more, including a maximum of 2 hours of connection time' (lines 125-129). Counting up to two hours of the wait gives 700 minutes (business); reading the maximum as a cap on the connection, or leaving ground time out, gives no business class. Hold the most economical business fare (or the economy fare of the other reading) for the Executive Director."
 }

@@ -12,7 +12,7 @@
     "garnet-sound"
   ],
   "ambiguity_note": "none: the Strategy and Operations Director's approval of a ticket above EUR 5,000 is required and missing",
-  "request": "Johannesburg to London Heathrow on March 15th for meetings with our UK funding partners starting on the 17th. Business class, please.",
+  "request": "Johannesburg to London Heathrow on March 15th for meetings with our UK funding partners starting on the afternoon of the 16th. Business class, please.",
   "trip": {
     "traveller_name": "Thandiwe Nkosi",
     "traveller_title": "Consultant, health economics",
@@ -28,7 +28,7 @@
     "booking_date": "2027-01-15",
     "planning_note": "",
     "purpose": "Meetings with the UK funding partners",
-    "first_meeting_date": "2027-03-17",
+    "first_meeting_date": "2027-03-16",
     "meeting_with": "EXTERNAL_PARTNERS",
     "requested_cabin": "BUSINESS",
     "requested_routing": "ANY",

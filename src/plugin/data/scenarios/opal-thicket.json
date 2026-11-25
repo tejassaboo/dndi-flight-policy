@@ -10,7 +10,7 @@
   "twin_fact": "",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Delhi to Johannesburg on March 8th for the trial-protocol meetings with our South African research partners, starting on the 10th. Business class please, if the policy allows it; otherwise economy is fine.",
+  "request": "Delhi to Johannesburg on March 8th for the trial-protocol meetings with our South African research partners, starting on the afternoon of the 9th. Business class please, if the policy allows it; otherwise economy is fine.",
   "trip": {
     "traveller_name": "Rohan Iyer",
     "traveller_title": "Head of Clinical Development, New Delhi office",
@@ -26,7 +26,7 @@
     "booking_date": "2027-01-10",
     "planning_note": "",
     "purpose": "Trial-protocol meetings with the South African research partners",
-    "first_meeting_date": "2027-03-10",
+    "first_meeting_date": "2027-03-09",
     "meeting_with": "EXTERNAL_PARTNERS",
     "requested_cabin": "BUSINESS",
     "requested_routing": "ANY",
@@ -146,6 +146,7 @@
     ],
     "clauses": [
       "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
       "TRAVEL_CLASS"
     ],
     "unclear_phrase": ""
@@ -207,5 +208,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Multi-leg journeys: Emirates flies 220 + 490 = 710 minutes with a 75-minute connection, Qatar 245 + 495 = 740 with 80. The flights alone reach 11 hours and each connection is within two hours, so the multi-leg condition holds on every reading of lines 125-129. The second flights cross the night; the traveller meets the external partners on the 10th, the day after landing. Executive Director and Head of Financial Control approvals are on file: the most economical business option, Emirates at EUR 3,620."
+  "design_notes": "Multi-leg journeys: Emirates flies 220 + 490 = 710 minutes with a 75-minute connection, Qatar 245 + 495 = 740 with 80. The flights alone reach 11 hours and each connection is within two hours, so the multi-leg condition holds on every reading of lines 125-129. The second flights cross the night; the traveller meets the external partners on the afternoon of the 9th, the day of landing and the day after leaving. Executive Director and Head of Financial Control approvals are on file: the most economical business option, Emirates at EUR 3,620."
 }

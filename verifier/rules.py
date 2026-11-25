@@ -433,8 +433,15 @@ def business_request(trip, seated, economy, on_file):
     if len(lengths) != 1 or len(nights) != 1:
         raise ValueError("business options on both sides of a condition are not modelled (set background 0)")
     length, night = lengths.pop(), nights.pop()
-    arrival = day_number(low.segments[-1].arrive_local[:10])
-    meets = trip.meeting_with == Counterparts.EXTERNAL_PARTNERS and day_number(trip.first_meeting_date) - arrival in (0, 1)
+    # Lines 131-132, "the same or following day": counted from the day of landing or the day of leaving. Every case
+    # has both counts agree, so the answer does not turn on which day the phrase counts from.
+    meeting = day_number(trip.first_meeting_date)
+    landing = {day_number(offer.segments[-1].arrive_local[:10]) for offer in business}
+    leaving = {day_number(offer.segments[0].depart_local[:10]) for offer in business}
+    days = {meeting - day in (0, 1) for day in landing | leaving}
+    if len(days) != 1:
+        raise ValueError("a meeting day that is 'the same or following day' counted from one end only is not modelled")
+    meets = trip.meeting_with == Counterparts.EXTERNAL_PARTNERS and days.pop()
     failing = []
     if length is False:
         failing.append("the journey is under nine hours on a single leg and under 11 hours combined (lines 125-129)")
@@ -468,8 +475,9 @@ def business_request(trip, seated, economy, on_file):
                       f"Lines 124-134: business class is allowed and approved, but line 112: every airline ticket above "
                       f"EUR 5,000 must be approved before purchase by the Strategy and Operations Director; the most "
                       f"economical business fare is {low.fare_cents} cents and no such approval is on file: hold it.")
+    # The air cost approval (lines 108-111) and the EUR 5,000 rule (line 112) sit under a. Class and route.
     clauses = [*BUSINESS_CLAUSES]
-    if low.fare_cents == TICKET_LIMIT_CENTS:
+    if cost or low.fare_cents == TICKET_LIMIT_CENTS:
         clauses.append(Clause.CLASS_AND_ROUTE)
     return answer(Decision.BOOK, [low], LONG_BUSINESS, [*relied, *cost], clauses,
                   "Lines 124-132: the journey is long enough, includes overnight travel and the traveller meets external "
@@ -497,8 +505,8 @@ def crowd(trip, economy, on_file):
     if reasons != [ReasonCode.LOWEST_FARE]:
         raise ValueError("a group case that turns on the routing rule is not modelled")
     if riders(chosen[0]) < MOST_ON_ONE_ROUTING:
-        clauses = [*LOWEST_CLAUSES, Clause.INSURANCE]
-        return answer(Decision.BOOK, chosen, reasons, on_file, clauses,
+        clauses = [*LOWEST_CLAUSES, Clause.INSURANCE, Clause.TRAVEL_PRINCIPLES]
+        return answer(Decision.BOOK, chosen, [*reasons, ReasonCode.TRAVELLER_LIMIT_PER_FLIGHT], on_file, clauses,
                       f"{note}; lines 44-45: with this traveller {riders(chosen[0]) + 1} DNDi Travellers take that "
                       "routing, not more than five.")
     others = [offer for offer in economy if riders(offer) < MOST_ON_ONE_ROUTING]
@@ -525,7 +533,8 @@ def personal(trip, offers, economy, on_file):
     if not trip.traveller_pays_difference:
         raise ValueError("a personal date without the traveller paying the difference is not modelled")
     extra = wanted[0].fare_cents - base[0].fare_cents
-    return answer(Decision.BOOK, wanted, [ReasonCode.PERSONAL_COST_PAID_BY_TRAVELER, ReasonCode.LOWEST_FARE], on_file,
+    return answer(Decision.BOOK, wanted, [ReasonCode.PERSONAL_COST_PAID_BY_TRAVELER, ReasonCode.LOWEST_FARE,
+                                          ReasonCode.PERSONAL_TRAVEL_NOT_COVERED], on_file,
                   [Clause.PERSONAL_LEAVE, Clause.TRAVEL_PRINCIPLES],
                   f"Lines 46-50: the personal days are incidental and approved on the Travel Request form; DNDi pays the "
                   f"cost of the DNDi Travel alone ({base[0].fare_cents} cents) and the traveller pays the {extra} cents "

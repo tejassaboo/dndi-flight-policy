@@ -137,7 +137,8 @@
     ],
     "reason_codes": [
       "LOWEST_FARE",
-      "PERSONAL_COST_PAID_BY_TRAVELER"
+      "PERSONAL_COST_PAID_BY_TRAVELER",
+      "PERSONAL_TRAVEL_NOT_COVERED"
     ],
     "approvers": [
       "NONE",

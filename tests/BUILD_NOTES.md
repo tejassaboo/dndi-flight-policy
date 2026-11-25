@@ -47,7 +47,7 @@ business booking has the Executive Director's approval on file, which settles DN
    continents), under every amount any reading gives the trip; every business fare above EUR 800 has the Head of
    Financial Control's written approval of the air cost on file. `rules.ceiling_checked` raises otherwise.
 3. **"Overnight travel"** (line 130) is undefined. Every case is clear: an overnight flight is in the air between
-   midnight and 06:00 on the clocks of both airports (marlin-crest 21:20 to 18:15 next day, ember-lagoon 01:55 to
+   midnight and 06:00 on the clocks of both airports (marlin-crest 14:30 to 11:25 next day (after the audit; 21:20 to 18:15 before), ember-lagoon 01:55 to
    05:25); a day flight is in the air at no such time on either clock (pewter-glade 07:30 to 20:30, the short European
    flights). Anything else raises.
 4. **"Important meetings with external partners the same or following day."** Every business case names external

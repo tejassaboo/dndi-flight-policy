@@ -256,14 +256,14 @@ scenario(
 scenario(
     "marlin-crest", "easy", ["dearer_option", "overnight", "date_arithmetic"],
     "London Heathrow to Singapore on March 2nd for the supply-contract negotiation with our Singapore manufacturing "
-    "partner, starting on the 4th. " + FALLBACK,
+    "partner, starting at 5 pm on the 3rd. " + FALLBACK,
     trip(kind="CONSULTANT", traveller_name="Helen Ashworth", traveller_title="Consultant, chemistry manufacturing",
          form_name="Thomas Brun", origin="LHR", destination="SIN", travel_date="2027-03-02", booking_date="2027-01-04",
-         purpose="Supply-contract negotiation with the Singapore manufacturing partner", first_meeting_date="2027-03-04",
+         purpose="Supply-contract negotiation with the Singapore manufacturing partner", first_meeting_date="2027-03-03",
          requested_cabin="BUSINESS", sign_offs=[ED_IF, HFC]),
     search("LHR", "SIN", "2027-03-02", {
-        "british": {"carrier": "BA", "depart": "21:20", "minutes": [775]},
-        "singapore": {"carrier": "SQ", "depart": "21:50", "minutes": [780]},
+        "british": {"carrier": "BA", "depart": "14:30", "minutes": [775]},
+        "singapore": {"carrier": "SQ", "depart": "15:00", "minutes": [780]},
     }, [
         offer("british-economy", "british", "ECONOMY", 88000),
         offer("british-business", "british", "BUSINESS", 410000),
@@ -271,10 +271,11 @@ scenario(
         offer("singapore-business", "singapore", "BUSINESS", 438000),
     ]),
     expected("BOOK", ["british-business"], ["BUSINESS"], LONG_BUSINESS,
-             MGR + ["EXECUTIVE_DIRECTOR", "FINANCIAL_CONTROL_HEAD"], BUSINESS),
+             MGR + ["EXECUTIVE_DIRECTOR", "FINANCIAL_CONTROL_HEAD"], BUSINESS + ["CLASS_AND_ROUTE"]),
     LONG_KEEP,
-    "Overnight nonstops of 775 and 780 minutes (single leg nine hours or more) land on March 3rd; the meetings with "
-    "the external partner are on the 4th, the following day (lines 124-132). The Executive Director approved business "
+    "Overnight nonstops of 775 and 780 minutes (single leg nine hours or more) leave London in the afternoon and land "
+    "on March 3rd before noon; the negotiation with the external partner starts at 5 pm that day, the day of landing "
+    "and the day after leaving, so 'the same or following day' holds counted from either end (lines 124-132). The Executive Director approved business "
     "class beforehand (lines 133-134) and the Head of Financial Control approved the air cost above the Annex 2 "
     "ceiling (lines 108-111). Of the two business options the most economical (lines 137-139): BA at EUR 4,100, not "
     "above EUR 5,000.",
@@ -373,7 +374,7 @@ ON_FILE = MGR + ["EXECUTIVE_DIRECTOR", "FINANCIAL_CONTROL_HEAD"]
 
 scenario(
     "ember-lagoon", "boundary_twin", ["dearer_option", "overnight"], LON_REQUEST, trip(**LON_TRIP), mumbai(540),
-    expected("BOOK", ["india-business"], ["BUSINESS"], LONG_BUSINESS, ON_FILE, BUSINESS),
+    expected("BOOK", ["india-business"], ["BUSINESS"], LONG_BUSINESS, ON_FILE, BUSINESS + ["CLASS_AND_ROUTE"]),
     LONG_KEEP,
     "Overnight nonstops (leaving 01:55 and 02:40, landing that morning) scheduled at 540 minutes: a single leg "
     "journey of nine hours or more (inclusive, line 125). The traveller meets the external partners the following "
@@ -434,11 +435,11 @@ scenario(
 scenario(
     "opal-thicket", "multi_rule", ["multi_leg", "overnight", "dearer_option"],
     "Delhi to Johannesburg on March 8th for the trial-protocol meetings with our South African research partners, "
-    "starting on the 10th. " + FALLBACK,
+    "starting on the afternoon of the 9th. " + FALLBACK,
     trip(traveller_name="Rohan Iyer", traveller_title="Head of Clinical Development, New Delhi office",
          form_name="Arjun Mehta", origin="DEL", destination="JNB", travel_date="2027-03-08",
          booking_date="2027-01-10", purpose="Trial-protocol meetings with the South African research partners",
-         first_meeting_date="2027-03-10", requested_cabin="BUSINESS", sign_offs=[ED_IF, HFC]),
+         first_meeting_date="2027-03-09", requested_cabin="BUSINESS", sign_offs=[ED_IF, HFC]),
     search("DEL", "JNB", "2027-03-08", {
         "dubai": {"carrier": "EK", "via": ["DXB"], "depart": "19:00", "minutes": [220, 490], "layovers": [75]},
         "doha": {"carrier": "QR", "via": ["DOH"], "depart": "20:30", "minutes": [245, 495], "layovers": [80]},
@@ -449,12 +450,13 @@ scenario(
         offer("doha-business", "doha", "BUSINESS", 389000),
     ]),
     expected("BOOK", ["dubai-business"], ["BUSINESS"], LONG_BUSINESS, SUP + ["EXECUTIVE_DIRECTOR",
-                                                                             "FINANCIAL_CONTROL_HEAD"], BUSINESS),
+                                                                             "FINANCIAL_CONTROL_HEAD"],
+             BUSINESS + ["CLASS_AND_ROUTE"]),
     LONG_KEEP,
     "Multi-leg journeys: Emirates flies 220 + 490 = 710 minutes with a 75-minute connection, Qatar 245 + 495 = 740 "
     "with 80. The flights alone reach 11 hours and each connection is within two hours, so the multi-leg condition "
     "holds on every reading of lines 125-129. The second flights cross the night; the traveller meets the external "
-    "partners on the 10th, the day after landing. Executive Director and Head of Financial Control approvals are on "
+    "partners on the afternoon of the 9th, the day of landing and the day after leaving. Executive Director and Head of Financial Control approvals are on "
     "file: the most economical business option, Emirates at EUR 3,620.")
 
 scenario(
@@ -482,7 +484,7 @@ scenario(
     "pre-approval does not apply. Economy class, the fallback given: South African Airways at EUR 760.")
 
 JNB_REQUEST = ("Johannesburg to London Heathrow on March 15th for meetings with our UK funding partners starting on "
-               "the 17th. Business class, please.")
+               "the afternoon of the 16th. Business class, please.")
 
 
 def london(fare):
@@ -500,13 +502,14 @@ def london(fare):
 JNB_TRIP = {"kind": "CONSULTANT", "traveller_name": "Thandiwe Nkosi", "traveller_title": "Consultant, health economics",
                 "form_name": "Thomas Brun", "origin": "JNB", "destination": "LHR", "travel_date": "2027-03-15",
                 "booking_date": "2027-01-15", "purpose": "Meetings with the UK funding partners",
-                "first_meeting_date": "2027-03-17", "requested_cabin": "BUSINESS", "sign_offs": [ED_IF, HFC]}
+                "first_meeting_date": "2027-03-16", "requested_cabin": "BUSINESS", "sign_offs": [ED_IF, HFC]}
 
 scenario(
     "russet-heath", "multi_rule", ["dearer_option", "overnight"], JNB_REQUEST, trip(**JNB_TRIP), london(500000),
     expected("BOOK", ["british-business"], ["BUSINESS"], LONG_BUSINESS, ON_FILE, BUSINESS + ["CLASS_AND_ROUTE"]),
     LONG_KEEP + [TICKET],
-    "Overnight nonstops of 705 and 710 minutes to meetings with external partners the following day: business class "
+    "Overnight nonstops of 705 and 710 minutes, landing on the morning of the 16th, to meetings with external "
+    "partners that afternoon (the day of landing, the day after leaving): business class "
     "is allowed and the Executive Director approved it; the Head of Financial Control approved the air cost. The most "
     "economical business option is BA at exactly EUR 5,000.00, which is not above EUR 5,000 (line 112), so no "
     "Strategy and Operations Director approval is needed: book it.",
@@ -605,7 +608,8 @@ scenario(
             offer("india-sunday", "india", "ECONOMY", 48500),
         ], name="business-only"),
     ],
-    expected("BOOK", ["kenya-thursday"], ["ECONOMY"], ["LOWEST_FARE", "PERSONAL_COST_PAID_BY_TRAVELER"], SUP,
+    expected("BOOK", ["kenya-thursday"], ["ECONOMY"], ["LOWEST_FARE", "PERSONAL_COST_PAID_BY_TRAVELER",
+                                                      "PERSONAL_TRAVEL_NOT_COVERED"], SUP,
              ["PERSONAL_LEAVE", "TRAVEL_PRINCIPLES"]),
     [PERSONAL, ECONOMY, ROUTE, REQUEST, WORKFLOW],
     "Personal leave may be connected with DNDi Travel when incidental and approved on the Travel Request form, and "
@@ -645,7 +649,8 @@ scenario(
 scenario(
     "wren-hollow", "distractor", ["multi_traveller"],
     NBO_REQUEST.format(count="Four"), trip(travelling_with=team("wren-hollow", 4), **NBO_TRIP), johannesburg(),
-    expected("BOOK", ["kenya-economy"], ["ECONOMY"], ["LOWEST_FARE"], SUP, LOWEST_CLAUSES + ["INSURANCE"]),
+    expected("BOOK", ["kenya-economy"], ["ECONOMY"], ["LOWEST_FARE", "TRAVELLER_LIMIT_PER_FLIGHT"], SUP,
+             LOWEST_CLAUSES + ["INSURANCE", "TRAVEL_PRINCIPLES"]),
     [ECONOMY, ROUTE, REQUEST, WORKFLOW],
     "As sorrel-pike, but four colleagues are on the Kenya Airways flight: with this traveller five DNDi Travellers take "
     "that routing, which is not more than five (lines 44-45). The least costly routing: Kenya Airways at EUR 380.",
@@ -703,11 +708,12 @@ scenario(
 
 scenario(
     "hazel-tundra", "flag", ["multi_leg", "overnight", "unclear_phrase"],
-    "Johannesburg to Mumbai on March 3rd for meetings with our Indian manufacturing partner starting on the 5th. "
+    "Johannesburg to Mumbai on March 3rd for meetings with our Indian manufacturing partner starting at 5 pm on the "
+    "4th. "
     + FALLBACK,
     trip(kind="CONSULTANT", traveller_name="Naledi Mokoena", traveller_title="Consultant, supply chain",
          form_name="Thomas Brun", origin="JNB", destination="BOM", travel_date="2027-03-03", booking_date="2027-01-05",
-         purpose="Meetings with the Indian manufacturing partner", first_meeting_date="2027-03-05",
+         purpose="Meetings with the Indian manufacturing partner", first_meeting_date="2027-03-04",
          requested_cabin="BUSINESS", sign_offs=[ED_IF, HFC]),
     search("JNB", "BOM", "2027-03-03", {
         "evening": {"carrier": "KQ", "via": ["NBO"], "depart": "18:30", "minutes": [240, 340], "layovers": [150]},
@@ -724,7 +730,7 @@ scenario(
              phrase="including a maximum of 2 hours of connection time"),
     LONG_KEEP,
     "Both itineraries fly 240 + 340 = 580 minutes with a 150-minute connection in Nairobi (journey 730 minutes), "
-    "overnight, to meetings with an external partner the day after landing; no flight alone reaches nine hours. The "
+    "overnight, to meetings with an external partner on the evening of landing (the day after leaving); no flight alone reaches nine hours. The "
     "multi-leg condition counts 'the combined travel time of the journey ... 11 hours or more, including a maximum of "
     "2 hours of connection time' (lines 125-129). Counting up to two hours of the wait gives 700 minutes (business); "
     "reading the maximum as a cap on the connection, or leaving ground time out, gives no business class. Hold the "

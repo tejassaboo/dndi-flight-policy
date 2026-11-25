@@ -131,6 +131,7 @@
     ],
     "clauses": [
       "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
       "TRAVEL_CLASS"
     ],
     "unclear_phrase": ""

@@ -120,7 +120,8 @@
       "ECONOMY"
     ],
     "reason_codes": [
-      "LOWEST_FARE"
+      "LOWEST_FARE",
+      "TRAVELLER_LIMIT_PER_FLIGHT"
     ],
     "approvers": [
       "NONE",
@@ -130,7 +131,8 @@
       "AIR_TRAVEL",
       "CLASS_AND_ROUTE",
       "INSURANCE",
-      "TRAVEL_CLASS"
+      "TRAVEL_CLASS",
+      "TRAVEL_PRINCIPLES"
     ],
     "unclear_phrase": ""
   },

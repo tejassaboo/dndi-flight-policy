@@ -10,7 +10,7 @@
   "twin_fact": "",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "London Heathrow to Singapore on March 2nd for the supply-contract negotiation with our Singapore manufacturing partner, starting on the 4th. Business class please, if the policy allows it; otherwise economy is fine.",
+  "request": "London Heathrow to Singapore on March 2nd for the supply-contract negotiation with our Singapore manufacturing partner, starting at 5 pm on the 3rd. Business class please, if the policy allows it; otherwise economy is fine.",
   "trip": {
     "traveller_name": "Helen Ashworth",
     "traveller_title": "Consultant, chemistry manufacturing",
@@ -26,7 +26,7 @@
     "booking_date": "2027-01-04",
     "planning_note": "",
     "purpose": "Supply-contract negotiation with the Singapore manufacturing partner",
-    "first_meeting_date": "2027-03-04",
+    "first_meeting_date": "2027-03-03",
     "meeting_with": "EXTERNAL_PARTNERS",
     "requested_cabin": "BUSINESS",
     "requested_routing": "ANY",
@@ -70,14 +70,14 @@
         "flights": {
           "british": {
             "carrier": "BA",
-            "depart": "21:20",
+            "depart": "14:30",
             "minutes": [
               775
             ]
           },
           "singapore": {
             "carrier": "SQ",
-            "depart": "21:50",
+            "depart": "15:00",
             "minutes": [
               780
             ]
@@ -132,6 +132,7 @@
     ],
     "clauses": [
       "AIR_TRAVEL",
+      "CLASS_AND_ROUTE",
       "TRAVEL_CLASS"
     ],
     "unclear_phrase": ""
@@ -210,5 +211,5 @@
       "why": "the ceilings table; the fares booked are under every amount in it, or the air cost is approved"
     }
   ],
-  "design_notes": "Overnight nonstops of 775 and 780 minutes (single leg nine hours or more) land on March 3rd; the meetings with the external partner are on the 4th, the following day (lines 124-132). The Executive Director approved business class beforehand (lines 133-134) and the Head of Financial Control approved the air cost above the Annex 2 ceiling (lines 108-111). Of the two business options the most economical (lines 137-139): BA at EUR 4,100, not above EUR 5,000."
+  "design_notes": "Overnight nonstops of 775 and 780 minutes (single leg nine hours or more) leave London in the afternoon and land on March 3rd before noon; the negotiation with the external partner starts at 5 pm that day, the day of landing and the day after leaving, so 'the same or following day' holds counted from either end (lines 124-132). The Executive Director approved business class beforehand (lines 133-134) and the Head of Financial Control approved the air cost above the Annex 2 ceiling (lines 108-111). Of the two business options the most economical (lines 137-139): BA at EUR 4,100, not above EUR 5,000."
 }
