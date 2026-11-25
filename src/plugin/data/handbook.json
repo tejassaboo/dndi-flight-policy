@@ -8,7 +8,7 @@
   "raw_pdf_sha256": "dcae2c5c6e988b010ae94b3242b568058dc1d6ca0b41a6537e7cb5a5a97f2c1c",
   "words": 2946,
   "lines": 320,
-  "source": "not recorded locally (UNVERIFIED); the raw PDF (sha256 dcae2c5c...7f2c1c) is the pinned copy",
+  "source": "https://dndi.org/wp-content/uploads/2025/10/DNDi-Travel-And-Reimbursement-Policy.pdf; byte-identical to the pinned raw PDF (sha256 checked 2026-11-25)",
   "frozen_on": "2026-11-24",
   "scenario_count": 24,
   "currency": "EUR",
